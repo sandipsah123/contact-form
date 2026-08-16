@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<form method="post" action="" name="contact-form">
+     <h2>Registation Form</h2>
+    <b>First Name:</b><br>
+    <input type="text" name="FirstName"><br>
+
+    <b>Middle Name:</b><br>
+    <input type="text" name="MiddleName"><br>
+
+    <b>Last Name:</b><br>
+    <input type="text" name="LastName"><br>
+
+    <b>Father's Name:</b><br>
+    <input type="text" name="FathersName"><br>
+
+    <b>Mother Name:</b><br>
+    <input type="text" name="MotherName"><br>
+
+    <b>Contact Number:</b><br>
+    <input type="tel" name="ContactNumber"><br>
+
+    <b>Email:</b><br>
+    <input type="email" name="Email"><br>
+
+    <b>Category:</b><br>
+    <input type="radio" name="Category" value="OBC"> OBC
+    <input type="radio" name="Category" value="GEN"> GEN
+    <input type="radio" name="Category" value="SC/ST"> SC/ST
+    <input type="radio" name="Category" value="Others"> Others<br>
+
+    <b>Gender:</b><br>
+    <input type="radio" name="Gender" value="Male"> Male<
+    <input type="radio" name="Gender" value="Female"> Female
+    <input type="radio" name="Gender" value="Others"> Others<br>
+
+    <b>Class:</b><br>
+    <input type="text" name="Class"><br>
+
+    <b>Address:</b><br>
+    <textarea name="Address"></textarea><br>
+
+    <b>Photo:</b><br>
+    <input type="file" name="Photo"><br>
+
+    <b>City:</b><br>
+    <select name="City">
+        <option value="Select City">Select City</option>
+        <option value="Aurangabad">Aurangabad</option>
+        <option value="Begusarai">Begusarai</option>
+        <option value="Chennai">Chennai</option>
+        <option value="Darbhanga">Darbhanga</option>
+        <option value="Madhubani">Madhubani</option>
+    </select>
+
+    <br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+
+</form>
+
+
+<script>
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyx1Sh6XuA5xzkOuVvodwyCnOimjCzSrsxFSQGCg9pgoqwxoE4ZtvK0m7kt5ZfW04Z2/exec';
+
+const form = document.forms['contact-form'];
+
+form.addEventListener('submit', e => {
+
+    e.preventDefault();
+
+    fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form)
+    })
+    .then(response => {
+        alert("Your form has been successfully submitted.");
+    })
+    .then(() => {
+        window.location.reload();
+    })
+    .catch(error => {
+        console.error('Error!', error.message);
+        alert("There was an error submitting the form.");
+    });
+
+});
+
+</script>
+
+</body>
+</html>
