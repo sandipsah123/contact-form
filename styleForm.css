@@ -1,0 +1,67 @@
+
+.conductor h2{
+    color:blue;
+    height: 30px;
+    text-align: center;
+    text-align: top;
+}
+.conductor{
+    margin:10px;
+   
+  
+}
+.sandip{
+    padding:8px 10px;
+    width: 100px;
+    
+    font-size: 20px;
+    
+
+}
+.fullborder{
+    border:400px solid whitesmoke;
+    padding:10px 10px 10px 10px;
+    
+    background-color:wheat;
+}
+.fathers{
+    padding:8px 10px;
+    width:230px;
+     font-size: 20px;
+    
+
+}
+.mother{
+    padding:8px 10px;
+    width:230px;
+     font-size: 20px;
+    
+
+}
+.radio{
+    padding:8px 10px;
+    border:5px solid wheat;
+    font-size: 20px;
+   
+    width:230px;
+  
+}
+
+.hello{
+    margin:5px;
+    width:230px;
+    padding:8px 10px;
+    font-size:20px;
+}
+.button{
+    padding:8px 10px;
+    width:100px;
+    font-size:20px;
+    background-color: darkblue;
+    box-shadow: rebeccapurple;
+    
+    border: royalblue;
+    
+    
+
+}

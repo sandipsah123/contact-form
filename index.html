@@ -1,102 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Registration Form</title>
-
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form1</title>
+    <link rel="stylesheet" href="styleForm.css">
 </head>
 
-<body>
+<body class="fullborder">
+    <div class="conductor">
+        <h2>Registation Form</h2>
+        <form class="conductor" action="" method="POST" name="Student-Registation Form">
+        <div class="conductor">
+            <input type="text" name="FirstName" placeholder="First Name" class="sandip">
+            <span>
+                <input type="text" name="LastName" placeholder="Last Name" class="sandip">
+            </span>
+        </div>
+        <div class="conductor">
+            <input type="text" name="FathersName" placeholder="Father's Name" class="fathers">
+            
+        </div>
+        <div class="conductor">
+            <input type="text" name="MotherName" placeholder="Mother Name" class="mother">
+        </div>
+        <div class="conductor">
+            <input type="text" name="email" placeholder="Email" class="mother">
+        </div>
+        <div class="conductor">
+            <input type="text" name="ContactNumber" placeholder="Contact Number" class="mother">
+        </div>
+        <div class="radio" >
+            
+            <input type="radio"  value="Male" name="Gender">Male
+            <input type="radio"  value="Female" name="Gender">Female
+            <input type="radio"  value="Other" name="Gender">Other
 
-<form method="post" action="" name="contact-form">
-     <h2>Registation Form</h2>
-    <b>First Name:</b><br>
-    <input type="text" name="FirstName"><br>
+        </div>
+        <div class="selected">
+            <select name="Category" class="hello">
+                <option value="Select Category ">Select Category</option>
+                <option value="OBC">OBC</option>
+                <option value="EBC">EBC</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+                <option value="GENERAL">GENERAL</option>
+                <option value="Other">Other</option>
+               
+            </select>
+        </div>
+        <div class="selected">
+            <select name="District" class="hello">
+                <option value="Select District">Select District</option>
+                <option value="Asam">Asam</option>
+                <option value="Begusarai">Begusarai</option>
+                <option value="Katihar">Katihar</option>
+                <option value="Darbhanga">Darbhanga</option>
+                <option value="Supaul">Supaul</option>
+                <option value="Baka">Baka</option>
+                <option value="Nalanda">Nalanda</option>
+                <option value="Madhubani">Madhubani</option>
+            </select>
+        </div>
+        <div class="selected">
+            <select name="state" class="hello">
+                <option value="Select State">Select State</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Bihar">Bihar Sarif</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bihar">Bihar</option>
+            </select>
+        </div>
+        <div class="submit">
+            <input type="submit" name="submit" placeholder="submit" class="button">
+            <input type="reset" name="reset" placeholder="reset" class="button">
+        </div>
 
-    <b>Middle Name:</b><br>
-    <input type="text" name="MiddleName"><br>
+    </form>
+    </div>
+    <script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbw9WOIfp3oOx3k0b5Ih4NfUBj-Ga2NVWQrC_2dJtJzgk4WnhmP_uhIXtztuVI10h82hzg/exec'
 
-    <b>Last Name:</b><br>
-    <input type="text" name="LastName"><br>
-
-    <b>Father's Name:</b><br>
-    <input type="text" name="FathersName"><br>
-
-    <b>Mother Name:</b><br>
-    <input type="text" name="MotherName"><br>
-
-    <b>Contact Number:</b><br>
-    <input type="tel" name="ContactNumber"><br>
-
-    <b>Email:</b><br>
-    <input type="email" name="Email"><br>
-
-    <b>Category:</b><br>
-    <input type="radio" name="Category" value="OBC"> OBC
-    <input type="radio" name="Category" value="GEN"> GEN
-    <input type="radio" name="Category" value="SC/ST"> SC/ST
-    <input type="radio" name="Category" value="Others"> Others<br>
-
-    <b>Gender:</b><br>
-    <input type="radio" name="Gender" value="Male"> Male<
-    <input type="radio" name="Gender" value="Female"> Female
-    <input type="radio" name="Gender" value="Others"> Others<br>
-
-    <b>Class:</b><br>
-    <input type="text" name="Class"><br>
-
-    <b>Address:</b><br>
-    <textarea name="Address"></textarea><br>
-
-    <b>Photo:</b><br>
-    <input type="file" name="Photo"><br>
-
-    <b>City:</b><br>
-    <select name="City">
-        <option value="Select City">Select City</option>
-        <option value="Aurangabad">Aurangabad</option>
-        <option value="Begusarai">Begusarai</option>
-        <option value="Chennai">Chennai</option>
-        <option value="Darbhanga">Darbhanga</option>
-        <option value="Madhubani">Madhubani</option>
-    </select>
-
-    <br><br>
-
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-
-</form>
-
-
-<script>
-
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyx1Sh6XuA5xzkOuVvodwyCnOimjCzSrsxFSQGCg9pgoqwxoE4ZtvK0m7kt5ZfW04Z2/exec';
-
-const form = document.forms['contact-form'];
+const form = document.forms['Student-Registation Form']
 
 form.addEventListener('submit', e => {
-
-    e.preventDefault();
-
-    fetch(scriptURL, {
-        method: 'POST',
-        body: new FormData(form)
-    })
-    .then(response => {
-        alert("Your form has been successfully submitted.");
-    })
-    .then(() => {
-        window.location.reload();
-    })
-    .catch(error => {
-        console.error('Error!', error.message);
-        alert("There was an error submitting the form.");
-    });
-
-});
-
-</script>
-
+  
+  e.preventDefault()
+  
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Your form has been successfully submitted. We truly appreciate your interest and will be in touch with you shortly." ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+    </script>
+  
+    
 </body>
 </html>
